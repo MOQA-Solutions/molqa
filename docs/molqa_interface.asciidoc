@@ -73,12 +73,13 @@ first argument
 *** It should be a `string`
 * *Use Cases*
 ** This function is to be used to `subscribe` to the *Destination* given as argument
-** The *Destination* can be either *Accept* or *Reject* this *Subscription Request*
+** The *Destination* can either *Accept* or *Reject* this *Subscription Request*
 ** Subscription is *Bipolar*, that means when User `X` *Accept* a *Subscription Request* from User `Y`,
 `X` will be *Subscribed* to `Y` and `Y` will be *Subscribed* to `X`
 ** *Subscribers* have *Extra* benefits than *Non-Subscribers*
 *** Subscribers will be *Notified* between them by *Presence/LastSeen State*
-*** Subscribers will be *Notified* when *Sending a Message* that this Message has *Reach its Destination* 
+*** Subscribers will be *Notified* when *Sending a Message* that this Message
+has *Reached its Destination* when it did.
 ====
 [float]
 = subcnl/1
@@ -127,8 +128,8 @@ first argument
 * *Use Cases*
 ** This function is to be used to `block` the *Destination* given as argument
 ** Blocking a *Subscribed* User results in *unsubscribing* him
-** Blocking a User which we have *Already Sent* a *Subscription Request* results in *Cancelling* this
-*Subscription Request*
+** Blocking a User which we have *Already Sent* or he has *Already Sent* a *Subscription Request*,
+results in *Cancelling* this *Subscription Request*.
 ====
 [float]
 = unblock/1

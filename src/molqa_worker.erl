@@ -117,7 +117,6 @@ callback_mode() ->
 	state_functions.
 
 
-
 %%===================================================================================================================%%
 
 %%						gen_statem callback functions		      			     %%
@@ -171,7 +170,6 @@ not_connected({call , _From} , _Call , Data) ->
 
 
 %%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%%
-
 
 
 before_connected(info , {tcp , Socket , BinPacket} , Data =#data{socket = Socket}) ->
@@ -429,7 +427,6 @@ before_connected_handle_server_packet(#subscribe{source = Source} = MoqaData , D
 	ack_and_keep_state(before_connected , MoqaData , Data);
 
 
-
 before_connected_handle_server_packet(#subresp{source = Source} = MoqaData , Data) ->
 
 	%%  - show in the app that Source has accepted your subscription request and become a friend
@@ -443,7 +440,6 @@ before_connected_handle_server_packet(#subresp{source = Source} = MoqaData , Dat
 	StrSource = binary_to_list(Source),
 	io:format("~p~n" , [StrSource ++ " has accepted your subscription request"]),
 	ack_and_keep_state(before_connected , MoqaData , Data);
-
 
 
 before_connected_handle_server_packet(_AckPacket , Data) ->
