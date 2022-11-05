@@ -1,0 +1,25 @@
+:interface: https://github.com/MOQA-Solutions/molqa/blob/master/docs/molqa_interface.asciidoc
+:example: https://github.com/MOQA-Solutions/moqa_example
+[float]
+= What is this
+*Molqa* is an Erlang *Client* for *Moqa Server*, it was designed to be the *User's Interface* to
+communicate with the *Server Side*. +
+*Molqa* use the same *Moqa*'s Library for `encode` and `decode` Packets which is *Moqalib*. +
+[float]
+= Features
+You can check {interface}[here] a Full Description of *Molqa*'s Features.
+= Graphic Implementation
+[.result]
+====
+* You should respect exactly and carrefully the *GRAPHICAL RULES* mentionned at the head of file `molqa_worker.erl`.
+* You *May Lost* your Data if you don't respect these *Rules*
+* You should implement the Graphical Application with some *Restrictions*
+** For example you can't `subscribe` or `publish` to *Yourself*
+** You can't `unsubscribe` a User which is not a *Subscriber*
+** ....
+====
+[float]
+= Example
+You can check {example}[here] a very useful example of using Molqa Client in real _3-tiers_ *Web Application*.
+
+

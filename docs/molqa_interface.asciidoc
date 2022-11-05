@@ -1,0 +1,166 @@
+[float]
+= signup/2
+[.result]
+====
+* *Args*
+** *Username*
+*** It should be a `string`
+*** It can include any `char` from the *ASCII Code*
+*** It's length is not limited
+** *Password*
+*** It should be a `string`
+*** It can include any `char` from the *ASCII Code*
+*** It's length is not limited
+* *Use Cases*
+** This function is to be used to `signup` for a *New* User's Account.
+====
+[float]
+= connect/2
+[.result]
+====
+* *Args*
+** *Username*
+*** It should be a `string`
+*** It can include any `char` from the *ASCII Code*
+*** It's length is not limited
+** *Password*
+*** It should be a `string`
+*** It can include any `char` from the *ASCII Code*
+*** It's length is not limited
+* *Use Cases*
+** This function is to be used to `signin` for a New Session of an *Existed User's Account*.
+====
+[float]
+= deactivate/0
+[.result]
+====
+* *Args*
+** no arguments
+* *Use Cases*
+** This function is to be used to `deactivate` *Definitively* an *Existed User's Account*
+** The *Deactivated* User will *Disappear* from *All Subscribers Users*.
+====
+[float]
+= disconnect/0
+[.result]
+====
+* *Args*
+** no arguments
+* *Use Cases*
+** This function is to be used to `disconnect` from a *Current Active Session*
+====
+[float]
+= publish/2
+[.result]
+* *Args*
+** *Destination*
+*** The *Username* corresponding to the *Message's Destination*
+*** It should be a `string`
+** *Message*
+*** The *Body of the Message* to be *Published*
+*** It should be a `string`
+* *Use Cases*
+** This function is to be used to `publish` the *Message* given as second argument to the User given as
+first argument
+====
+[float]
+= subscribe/1
+[.result]
+====
+* *Args*
+** *Destination*
+*** The *Username* corresponding to the *Subscription Request's Destination*
+*** It should be a `string`
+* *Use Cases*
+** This function is to be used to `subscribe` to the User given as argument
+** The *Destination* can be either *Accept* or *Reject* this *Subscription Request*
+** Subscription is *Bipolar*, that means when User `X` *Accept* a *Subscription Request* from User `Y`,
+`X` will be *Subscribed* to `Y` and `Y` will be *Subscribed* to `X`
+** *Subscribers* have *Extra* benefits than *Non-Subscribers*
+*** Subscribers will be *Notified* between them by *Presence/LastSeen State*
+*** Subscribers will be *Notified* when *Sending a Message* that this Message has *Reach its Destination* 
+====
+[float]
+= subcnl/1
+[.result]
+====
+* *Args*
+** *Destination*
+*** The *Username* which we want to *Cancel* a *Pre-Sent Subscription Request* to it
+*** It should be a `string`
+* *Use Cases*
+** This function is to be used to `cancel` an *Already Sent Subscription Request* to the User given as argument
+====
+[float]
+= subresp/2
+[.result]
+====
+* *Args*
+** *Destination*
+*** The *Username* corresponding to the *Subscription Response Destination*
+*** It should be a `string`
+** *Response* 
+*** The decision made about the *Pre-Sent Subscription Request*
+*** It can be either `0` for *Reject* or `1` for *Accept*
+* *Use Cases*
+** This function is to be used to `response` to an *Already Sent Subscription Request* by the User given as
+first argument
+====
+[float]
+= unsubscribe/1
+[.result]
+* *Args*
+** *Destination*
+*** The *Username* which we want to *unsubscribe*
+*** It should be a `string`
+* *Use Cases*
+** This function is to be used to `unsubscribe` an *Already Subscribed User* which given as argument
+====
+[float]
+= block/1
+[.result]
+====
+* *Args*
+** *Destination*
+*** The *Username* which we want to *Block*
+*** It should be a `string`
+* *Use Cases*
+** This function is to be used to `block` the User given as argument
+** Blocking a *Subscribed* User results in *unsubscribing* him
+** Blocking a User which we have *Already Sent* a *Subscription Request* results in *Cancelling* this
+*Subscription Request*
+====
+[float]
+= unblock/1
+[.result]
+====
+* *Args*
+** *Destination*
+*** The *Username* which we want to *Unblock*
+*** It should be a `string`
+* *Use Cases*
+** This function is to be used to `unblock` the User given as argument
+====
+[float]
+= get_client_state/0
+[.result]
+====
+* *Args*
+** no arguments
+* *Use Cases*
+** This function returns the *State* of the *Client Process* which is `molqa_worker`
+** It can be used for *Debugging*
+====
+[float]
+= get_server_state/0  
+[.result]
+====
+* *Args*
+** no arguments
+* *Use Cases*
+** This function returns the *State* of the *Server Actor Process* which is `moqa_worker`
+** It can be used for *Debugging*
+====
+
+
+ 
