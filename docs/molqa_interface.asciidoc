@@ -60,7 +60,7 @@
 *** The *Body of the Message* to be *Published*
 *** It should be a `string`
 * *Use Cases*
-** This function is to be used to `publish` the *Message* given as second argument to the User given as
+** This function is to be used to `publish` the *Message* given as second argument to the *Destination* given as
 first argument
 ====
 [float]
@@ -72,7 +72,7 @@ first argument
 *** The *Username* corresponding to the *Subscription Request's Destination*
 *** It should be a `string`
 * *Use Cases*
-** This function is to be used to `subscribe` to the User given as argument
+** This function is to be used to `subscribe` to the *Destination* given as argument
 ** The *Destination* can be either *Accept* or *Reject* this *Subscription Request*
 ** Subscription is *Bipolar*, that means when User `X` *Accept* a *Subscription Request* from User `Y`,
 `X` will be *Subscribed* to `Y` and `Y` will be *Subscribed* to `X`
@@ -89,7 +89,7 @@ first argument
 *** The *Username* which we want to *Cancel* a *Pre-Sent Subscription Request* to it
 *** It should be a `string`
 * *Use Cases*
-** This function is to be used to `cancel` an *Already Sent Subscription Request* to the User given as argument
+** This function is to be used to `cancel` an *Already Sent Subscription Request* to the *Destination* given as argument
 ====
 [float]
 = subresp/2
@@ -103,7 +103,7 @@ first argument
 *** The decision made about the *Pre-Sent Subscription Request*
 *** It can be either `0` for *Reject* or `1` for *Accept*
 * *Use Cases*
-** This function is to be used to `response` to an *Already Sent Subscription Request* by the User given as
+** This function is to be used to `response` to an *Already Sent Subscription Request* by the *Destination* given as
 first argument
 ====
 [float]
@@ -114,7 +114,7 @@ first argument
 *** The *Username* which we want to *unsubscribe*
 *** It should be a `string`
 * *Use Cases*
-** This function is to be used to `unsubscribe` an *Already Subscribed User* which given as argument
+** This function is to be used to `unsubscribe` the *Destination* given as argument
 ====
 [float]
 = block/1
@@ -125,7 +125,7 @@ first argument
 *** The *Username* which we want to *Block*
 *** It should be a `string`
 * *Use Cases*
-** This function is to be used to `block` the User given as argument
+** This function is to be used to `block` the *Destination* given as argument
 ** Blocking a *Subscribed* User results in *unsubscribing* him
 ** Blocking a User which we have *Already Sent* a *Subscription Request* results in *Cancelling* this
 *Subscription Request*
@@ -139,7 +139,7 @@ first argument
 *** The *Username* which we want to *Unblock*
 *** It should be a `string`
 * *Use Cases*
-** This function is to be used to `unblock` the User given as argument
+** This function is to be used to `unblock` the *Destination* given as argument
 ====
 [float]
 = get_client_state/0

@@ -8,12 +8,13 @@ communicate with the *Server Side*. +
 [float]
 = Features
 You can check {interface}[here] a Full Description of *Molqa*'s Features.
-= Graphic Implementation
+[float]
+= Graphical Implementation
 [.result]
 ====
 * You should respect exactly and carrefully the *GRAPHICAL RULES* mentionned at the head of file `molqa_worker.erl`.
-* You *May Lost* your Data if you don't respect these *Rules*
-* You should implement the Graphical Application with some *Restrictions*
+* You *May Lost* your Data if you don't respect these *Rules*.
+* You should implement the *Client* Application with some *Restrictions*.
 ** For example you can't `subscribe` or `publish` to *Yourself*
 ** You can't `unsubscribe` a User which is not a *Subscriber*
 ** ....
